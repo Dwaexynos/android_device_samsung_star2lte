@@ -26,12 +26,13 @@ $(call inherit-product, device/samsung/star2lte/device.mk)
 # Boot Animation
 TARGET_SCREEN_HEIGHT := 2960
 TARGET_SCREEN_WIDTH := 1440
+TARGET_BOOT_ANIMATION_RES := 1440
 
 ## Inherit some common Lineage stuff
-$(call inherit-product, vendor/arrow/config/common.mk)
+$(call inherit-product, vendor/awaken/config/common_full_phone.mk)
 
 ## Device identifier, this must come after all inclusions
-PRODUCT_NAME := arrow_star2lte
+PRODUCT_NAME := awaken_star2lte
 PRODUCT_DEVICE := star2lte
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-G965F
@@ -39,8 +40,9 @@ PRODUCT_MANUFACTURER := samsung
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
-# ArrowOS Properties
-DEVICE_MAINTAINER := Baddar90
+## Build with GAPPS
+TARGET_GAPPS_ARCH := arm64
+USE_GAPPS := true
 
 BUILD_FINGERPRINT := "samsung/star2ltexx/star2lte:10/QP1A.190711.020/G965FXXSHFUJ2:user/release-keys"
 

@@ -26,7 +26,6 @@ $(call inherit-product, device/samsung/star2lte/device.mk)
 # Boot Animation
 TARGET_SCREEN_HEIGHT := 2960
 TARGET_SCREEN_WIDTH := 1440
-TARGET_BOOT_ANIMATION_RES := 1440
 
 ## Inherit some common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
@@ -43,6 +42,9 @@ PRODUCT_GMS_CLIENTID_BASE := android-samsung
 # RiceDroid
 WITH_GMS := true
 RICE_MAINTAINER := dwaris
+
+# Boot Animation
+SUSHI_BOOTANIMATION := 1080
 
 BUILD_FINGERPRINT := "samsung/star2ltexx/star2lte:10/QP1A.190711.020/G965FXXSHFUJ2:user/release-keys"
 
